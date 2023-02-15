@@ -3,6 +3,7 @@ import { Section } from '../Section/Section';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Statistics } from 'components/Statistics/Statistics';
 import { Notification } from 'components/Notification/Notification';
+import { Container } from './FeedBack.styled';
 
 export class Feedback extends Component {
   state = {
@@ -18,7 +19,6 @@ export class Feedback extends Component {
     }));
   };
 
-  //
   getOptions = () => {
     return Object.keys(this.state);
   };
@@ -39,7 +39,7 @@ export class Feedback extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <>
+      <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
@@ -59,7 +59,7 @@ export class Feedback extends Component {
             <Notification message="There is no feedback"></Notification>
           )}
         </Section>
-      </>
+      </Container>
     );
   }
 }
