@@ -17,6 +17,8 @@ export class Feedback extends Component {
       [name]: prevState[name] + 1,
     }));
   };
+
+  //
   getOptions = () => {
     return Object.keys(this.state);
   };
